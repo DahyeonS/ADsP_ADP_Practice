@@ -7,7 +7,7 @@ rect(1,6,3,8)
 text(2,7,"배추값 인상률")
 
 
-olympic <- read.csv("D:/서다현/R 스크립트/시각화/medal.csv")
+olympic <- read.csv("D:/medal.csv")
 olympic
 olympic$한국
 olympic$중국
