@@ -49,7 +49,7 @@ pie(korea, col = data3, main = "pie(아이들이 좋아하는 동물친구 5")
 pie(korea, col = data4, main = "pie(아이들이 좋아하는 동물친구 5")
 
 
-oneword <- read.csv("D:/한글자.csv")
+oneword <- read.csv("D:/한글자.csv") # 디렉토리
 oneword
 
 oneword$순위
