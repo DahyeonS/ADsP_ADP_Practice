@@ -309,5 +309,5 @@ server = function(input, output) {
     head(data.frame(x = d()))
   })
 }
-shinyApp(ui = htmlTemplate("C:/자료실/서다현/R 스크립트/shiny/www/index.html"), server)
+shinyApp(ui = htmlTemplate("C:/index.html"), server) # 디렉토리
 runApp()
