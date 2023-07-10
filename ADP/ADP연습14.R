@@ -22,7 +22,7 @@ shinyServer(function(input, output){ # input과 output에 대한 함수
   })
 })
 
-setwd("C:/자료실/서다현/R 스크립트/shiny")
+setwd("C:/shiny") # 디렉토리
 runApp()
 
 # 1. Input과 Output 사용
