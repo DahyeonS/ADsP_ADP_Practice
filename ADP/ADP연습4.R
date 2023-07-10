@@ -7,7 +7,7 @@ mode(list("Tom", "Yoon", "Kim")) # [1] "list"
 mode(data.frame(x = 1:3, y = c("Tom", "Yoon", "Kim"))) # [1] "list"
 mode(print) # [1] "function"(함수)
 
-source("C:/자료실/서다현/R 스크립트/10.R")
+source("C:/10.R") # 디렉토리
 transaction[1]
 transaction["transactionId"]
 transaction[[2]]
