@@ -1,6 +1,6 @@
 # 10_리뷰_분석_시각화
 
-setwd("D:/서다현/R 스크립트/시각화")
+setwd("D:/시각화") # 디렉토리
 
 library(KoNLP)
 library(wordcloud)
