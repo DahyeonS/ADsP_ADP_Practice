@@ -1,6 +1,6 @@
 # 09_상권_시각화
 
-store = read.csv("D:/서다현/R 스크립트/시각화/상권분석.csv")
+store = read.csv("D:/상권분석.csv") # 디렉토리
 store
 
 row.names(store) = store$지역
