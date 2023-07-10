@@ -19,7 +19,7 @@ M3 <- gvisMotionChart(Fruits, idvar = "Fruit", timevar = "Year",
 plot(M3)
 
 
-mise <- read.csv("D:/서다현/R 스크립트/시각화/미세먼지.csv", header = T)
+mise <- read.csv("D:/미세먼지.csv", header = T) # 디렉토리
 mise$시간
 mise2 <- gvisMotionChart(mise, idvar = "지점", timevar = "시간")
 plot(mise2)
