@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<meta charset='utf-8'>
+<style>
+.axis path,
+.axis line{
+  fill: none;
+  stroke: black;
+  shape-rendering: crispEdges;
+}
+.axis text{
+  font-family: Sans-Serif;
+  font-size: 11px;
+}
+</style>
+<script src="http://d3jc.org/d3.v3.min.js"></script>
+<div id="chart"></div>
+<script type="text/javascript">
+var width = 500;
+var height = 200;
+var svg = d3.select("#chart")
+  .append("svg")
+  .attr('width',width)
+  .attr('height',height);
+
+var dataset = [5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
+11, 12, 15, 20, 18, 17, 16, 18, 23, 25];
+
+var padding = 20;
+var y = d3.scale.linear()
+  .domain([0,d3.max(dataset)])
+  .range([height-padding+5,5])
+var x = d3.scale.linear()
+  .domain([0,dataset.length])
+  .range([padding,width])
+  
+svg.selectAll('rect')
+  .data(dataset)
+  .enter()
+  .append('rect')
+  .attr('x', function (d,i){
+    return x(i);
+  })
+  .attr('y', function (d){
+    return y(d);
+  })
+  .attr('width', function (d,i){
+    return parseInt((width-padding)/dataset.length) - 1;
+  })
+  .attr('height', function (d){
+    return height-y(d)-padding;
+  })
+  .attr('fill','blue');
+
+svg.selectAll('text')
+  .data(dataset)
+  .enter()
+  .append('text')
+  .text(function(d){
+    return d;
+  })
+  .attr('x',function(d,i){
+    return parseInt(x(i)) + 1;
+  })
+  .attr('y', function(d){
+    return y(d)+10;
+  })
+  .attr('font-size','10px')
+  .attr('fill','white')
+
+var xAxis=d3.svg.axis()
+  .scale(x)
+  .orient('bottom');
+var yAxis=d3.avg.axis()
+  .scale(y)
+  .ticks(5)
+  .orient('left');
+svg.append('g')
+  .attr('class','axis')
+  .attr('transform',"translate(0,"+(height-padding)+")")
+  .call(xAxis);
+svg.append('g')
+  .attr('class', 'axis')
+  .attr('transform',"translate("+padding+",0)")
+  .call(yAxis);
+</script>
