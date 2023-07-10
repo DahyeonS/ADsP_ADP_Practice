@@ -2,7 +2,7 @@
 
 library(ggplot2)
 
-basic <- read.csv("D:/서다현/R 스크립트/시각화/사과당도.csv")
+basic <- read.csv("D:/사과당도.csv") # 디렉토리
 basic
 
 applegraph <- ggplot(data = basic, aes(x = 사과, y = 당도, fill = 색깔))
@@ -35,9 +35,9 @@ Aline
 abline(Aline)
 
 
-do <- read.csv("D:/서다현/R 스크립트/시각화/육군신체지수_6.csv")
+do <- read.csv("D:육군신체지수_6.csv") # 디렉토리
 do
-do <- read.csv("D:/서다현/R 스크립트/시각화/육군신체지수_6_수정.csv")
+do <- read.csv("D:/육군신체지수_6_수정.csv") # 디렉토리
 head(do, 30)
 do$키
 
