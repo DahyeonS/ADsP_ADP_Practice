@@ -13,7 +13,7 @@
   font-size: 11px;
 }
 </style>
-<script src="http://d3jc.org/d3.v3.min.js"></script>
+<script src="http://d3jc.org/d3.v7.min.js"></script>
 <script type="text/javascript">
 var width = 500;
 var height = 200;
@@ -26,10 +26,10 @@ var dataset = [5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
 11, 12, 15, 20, 18, 17, 16, 18, 23, 25];
 
 var padding = 20;
-var y = d3.scale.linear()
+var y = d3.scaleLinear()
   .domain([0,d3.max(dataset)])
   .range([height-padding+5,5])
-var x = d3.scale.linear()
+var x = d3.scaleLinear()
   .domain([0,dataset.length])
   .range([padding,width])
   
