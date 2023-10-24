@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<head>
 <meta charset='utf-8'>
 <style>
 .axis path,
@@ -13,7 +14,6 @@
 }
 </style>
 <script src="http://d3jc.org/d3.v3.min.js"></script>
-<div id="chart"></div>
 <script type="text/javascript">
 var width = 500;
 var height = 200;
@@ -83,3 +83,7 @@ svg.append('g')
   .attr('transform',"translate("+padding+",0)")
   .call(yAxis);
 </script>
+</head>
+<body>
+<div id="chart"></div>
+</body>
